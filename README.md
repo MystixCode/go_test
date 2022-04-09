@@ -1,5 +1,5 @@
 # go_test
-This is a go http server printing hello world. \
+This is a go http server printing hello world and a mongo db. \
 Setup with docker and docker-compose, with dev and prod environments.
 
 ## Run the project:
