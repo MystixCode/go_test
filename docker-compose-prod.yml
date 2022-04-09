@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: go_test_prod
+        ports:
+            - 8080:8080
+        networks:
+            - net
+    db:
+        image: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: example
+        container_name: go_test_prod_db
+        volumes:
+            - db:/data/db
+        networks:
+            - net
+volumes:
+    db:
+networks:
+  net: {}
