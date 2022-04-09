@@ -4,6 +4,9 @@ Setup with docker and docker-compose, with dev and prod environments.
 
 <img src="/img/docker.png" width="100%" height="100%">
 
+Dev: http://localhost:8081/ \
+Prod: http://localhost:8080/
+
 ## Run the project:
 
 ```shell
