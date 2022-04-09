@@ -13,6 +13,21 @@ Prod: http://localhost:8080/
 cd go_test
 ```
 
+### WITH DOCKER COMPOSE
+
+#### Dev Environment
+
+```shell
+docker-compose -p go_test_dev -f docker-compose-dev.yml up -d
+```
+
+#### Prod Environment
+
+```shell
+docker-compose -p go_test_prod -f docker-compose-prod.yml build
+docker-compose -p go_test_prod -f docker-compose-prod.yml up -d
+```
+
 ### WITHOUT DOCKER COMPOSE
 
 #### Dev Environment
@@ -37,21 +52,6 @@ docker network create go_test_prod_net
 docker run --network go_test_prod_net --name go_test_prod_db -d -v "go_test_prod_volume:/data/db" -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=example mongo
 
 docker run --network go_test_prod_net --name go_test_prod -dp 8080:8080 go_test_prod
-```
-
-### WITH DOCKER COMPOSE
-
-#### Dev Environment
-
-```shell
-docker-compose -p go_test_dev -f docker-compose-dev.yml up -d
-```
-
-#### Prod Environment
-
-```shell
-docker-compose -p go_test_prod -f docker-compose-prod.yml build
-docker-compose -p go_test_prod -f docker-compose-prod.yml up -d
 ```
 
 ## Clean up
