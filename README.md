@@ -2,6 +2,8 @@
 This is a go http server printing hello world and a mongo db. \
 Setup with docker and docker-compose, with dev and prod environments.
 
+<img src="/img/docker.png" width="100%" height="100%">
+
 ## Run the project:
 
 ```shell
