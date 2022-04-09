@@ -4,7 +4,9 @@ Setup with docker and docker-compose, with dev and prod environments.
 
 ## Run the project:
 
-cd into project dir
+```shell
+cd go_test
+```
 
 ### WITHOUT DOCKER COMPOSE
 
